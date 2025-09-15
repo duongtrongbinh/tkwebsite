@@ -9,6 +9,11 @@ export default defineNuxtConfig({
     },
     optimizeDeps: {
       include: ['@popperjs/core']
+    },
+    resolve: {
+      alias: {
+        '@popperjs/core': '@popperjs/core/dist/umd/popper.js'
+      }
     }
   },
   compatibilityDate: '2025-07-15',
