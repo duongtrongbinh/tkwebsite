@@ -12,8 +12,11 @@ export default defineNuxtConfig({
     },
     resolve: {
       alias: {
-        '@popperjs/core': '@popperjs/core/dist/umd/popper.js'
+        '@popperjs/core': '@popperjs/core/lib/index.js'
       }
+    },
+    ssr: {
+      noExternal: ['@popperjs/core']
     }
   },
   compatibilityDate: '2025-07-15',
