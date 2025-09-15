@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   css: ["~/assets/scss/main.scss", "bootstrap/dist/css/bootstrap.min.css"],
   vite: {
     define: {
-      "process.env.DEBUG": false,
+      "import.meta.env.DEBUG": false,
     },
   },
   compatibilityDate: '2025-07-15',
@@ -33,8 +33,8 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      NUXT_API_URL: process.env.NUXT_API_URL,
-      NUXT_WEB_URL: process.env.NUXT_WEB_URL
+      NUXT_API_URL: process.env.NUXT_API_URL || '',
+      NUXT_WEB_URL: process.env.NUXT_WEB_URL || ''
     },
   }
 })

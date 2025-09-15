@@ -18,7 +18,7 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   const getToken = (): string | null => {
-    if (process.client) {
+    if (import.meta.client) {
       if (!token.value) {
         token.value = localStorage.getItem('token') ?? null
       }
@@ -27,7 +27,7 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   const getUser = (): User | null => {
-    if (process.client) {
+    if (import.meta.client) {
       if (!user.value) {
         const userData = localStorage.getItem('user') ?? null
         user.value = userData ? JSON.parse(userData) : null
@@ -56,7 +56,7 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   const initAuth = () => {
-    if (process.client) {
+    if (import.meta.client) {
       const storedToken = localStorage.getItem('token')
       const storedUser = localStorage.getItem('user')
       token.value = storedToken ?? null
