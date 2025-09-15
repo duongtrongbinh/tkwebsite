@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     define: {
       "import.meta.env.DEBUG": false,
     },
+    optimizeDeps: {
+      include: ['@popperjs/core']
+    }
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
