@@ -1,0 +1,32 @@
+@use '~/assets/scss/main.scss' as *;
+
+.pagination {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    padding: 0;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.progress {
+  width: fit-content;
+  background-color: transparent;
+
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $color-gray-dark;
+  }
+}

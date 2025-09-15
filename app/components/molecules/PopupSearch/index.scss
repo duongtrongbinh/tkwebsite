@@ -1,0 +1,6 @@
+@use '~/assets/scss/main.scss' as *;
+
+:deep(.popup-search .el-dialog) {
+  background: transparent !important;
+  box-shadow: none !important;
+}

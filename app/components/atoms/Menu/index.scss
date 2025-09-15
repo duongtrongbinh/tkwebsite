@@ -1,0 +1,16 @@
+@use '~/assets/scss/main.scss' as *;
+
+:deep(.el-button.is-text:hover) {
+  background-color: transparent;
+  color: red;
+}
+
+.menu-master {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  button span i {
+    margin-left: .25rem;
+  }
+}

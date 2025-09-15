@@ -1,0 +1,43 @@
+@use '~/assets/scss/main.scss' as *;
+
+.menu {
+  margin-left: 4rem;
+  height: 100%;
+  width: 50rem;
+  max-width: 55rem;
+
+  .el-menu {
+    background-color: transparent;
+    height: 100%;
+    align-items: center;
+    border-bottom: none !important;
+
+    .el-menu-item.is-active, .el-menu-item{
+      color: $color-black !important;
+      border-bottom: none !important;
+    }
+
+    .el-menu-item:hover {
+      background-color: transparent !important;
+    }
+
+    .el-menu-item.is-active {
+      height: 50%;
+      background-color: color-opacity($color-gray-light, .6) !important;
+      border-radius: .25rem;
+      color: $color-sky-blue-accent !important;
+    }
+  }
+}
+
+.flex-column {
+  width: 100%;
+
+  :deep(.el-menu .el-menu-item), :deep(.el-menu .el-menu-item.is-active) {
+    height: 2rem !important;
+
+    &:hover {
+      color: $color-sky-blue-accent !important;
+    }
+  }
+}

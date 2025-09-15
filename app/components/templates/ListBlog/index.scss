@@ -1,0 +1,51 @@
+@use "~/assets/scss/main.scss" as *;
+
+.feature-list-blog {
+  display: grid;
+  justify-content: center;
+}
+
+.blog__header {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-sky-blue-accent;
+
+  .blog__header--title {
+    width: 100%;
+
+    .blog__header-title--main {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: $color-white;
+        line-height: 1;
+      }
+
+      p {
+        max-width: 992px;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-white;
+        line-height: 1.125;
+      }
+    }
+  }
+}
+
+.wrapper-feature-list-blog {
+  margin-top: 40px !important;
+
+  :deep(.pagination) {
+    padding-top: .5rem;
+    padding-bottom: 3.75rem;
+  }
+}

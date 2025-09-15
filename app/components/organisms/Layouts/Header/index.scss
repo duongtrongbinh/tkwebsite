@@ -1,0 +1,20 @@
+@use '~/assets/scss/main.scss' as *;
+
+.header {
+  width: $laptop-l-width;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__redirect {
+    width: calc(100% - 10rem - 4rem - 50rem);
+    min-width: calc(100% - 10rem - 4rem - 55rem);
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+}

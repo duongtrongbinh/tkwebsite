@@ -1,0 +1,65 @@
+@use "~/assets/scss/main.scss" as *;
+
+.back-to-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  z-index: 1000;
+  box-shadow: 0px 0px 4px 0px color-opacity($color-black, 0.1);
+  background-color: $color-white;
+  opacity: 0.6;
+
+  @media (min-width: $laptop-l-width) {
+    bottom: 4.3rem;
+    right: 0.7rem;
+  }
+
+  @media (max-width: $laptop-l-width) {
+    bottom: 4.2rem;
+    right: 0.7rem;
+  }
+
+  @media (max-width: $laptop-width) {
+    bottom: 4.2rem;
+    right: 0.7rem;
+  }
+
+  @media (max-width: $tablet-width) {
+    bottom: 4rem;
+    right: 0.5rem;
+  }
+
+  img {
+    @media (min-width: $laptop-xl-width) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    @media (max-width: $laptop-xl-width) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    @media (max-width: $laptop-l-width) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    @media (max-width: $laptop-width) {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

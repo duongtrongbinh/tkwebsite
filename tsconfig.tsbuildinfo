@@ -1,0 +1,1 @@
+{"root":["./.nuxt/nuxt.d.ts","./app/app.vue","./app/plugins/axios.ts","./app/plugins/pinia.ts","./.nuxt/nuxt.node.d.ts","./nuxt.config.ts"],"version":"5.9.2"}

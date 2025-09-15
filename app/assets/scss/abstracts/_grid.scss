@@ -1,0 +1,36 @@
+
+.d-flex {
+  display: flex !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+}
+
+
+@media (max-width: 1200px) {
+  .container {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}

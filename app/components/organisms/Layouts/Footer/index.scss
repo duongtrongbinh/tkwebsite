@@ -1,0 +1,31 @@
+@use '~/assets/scss/main.scss' as *;
+
+.footer {
+  padding-top: 2rem;
+}
+
+.information {
+  display: flex;
+  gap: 1rem;
+
+  p {
+    max-width: 30rem;
+    color: color-opacity($color-gray-dark, .8);
+  }
+}
+
+.share {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: 4rem;
+
+  :deep(.button-icon) {
+    height: 2.5rem !important;
+    border-radius: .675rem;
+
+    &:hover {
+      background-color: color-opacity($color-gray-dark, .25);
+    }
+  }
+}

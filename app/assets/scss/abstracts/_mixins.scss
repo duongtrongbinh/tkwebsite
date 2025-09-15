@@ -1,0 +1,41 @@
+:deep(.required .el-form-item__label:after) {
+  content: " *";
+  color: #dc3545;
+}
+
+.error-text {
+  color: #f56c6c;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+:deep(.el-image) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: #f56c6c;
+
+  .loading-failed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    .iconify {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    span {
+      font-size: 2rem;
+      line-height: 1;
+    }
+  }
+}

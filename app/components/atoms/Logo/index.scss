@@ -1,0 +1,16 @@
+.logo {
+  width: 10rem;
+  height: 4rem;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.el-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(2.25);
+}

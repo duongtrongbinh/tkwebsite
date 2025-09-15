@@ -1,0 +1,20 @@
+@use '~/assets/scss/main.scss' as *;
+
+.button-default {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.el-button {
+  padding: 0 1.25rem;
+  background-color: $color-gray-light !important;
+  color: $color-sky-blue-accent !important;
+  height: 2.5rem !important;
+
+  &:hover, &:active {
+    background-color: $color-black !important;
+    color: $color-white !important;
+  }
+}
