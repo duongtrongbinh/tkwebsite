@@ -33,8 +33,8 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      NUXT_API_URL: process.env.NUXT_API_URL || '',
-      NUXT_WEB_URL: process.env.NUXT_WEB_URL || ''
-    },
+      NUXT_API_URL: process.env.NUXT_API_URL ?? '',
+      NUXT_WEB_URL: process.env.NUXT_WEB_URL ?? ''
+    }
   }
 })
