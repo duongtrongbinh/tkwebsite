@@ -1,4 +1,5 @@
 import type {
+  AuthorizationData,
   RuleFormLogin,
   RuleFormRegister,
   User,
@@ -7,17 +8,22 @@ import { useAuthStore } from "@/stores/auth"
 import type { UserAuthorizationData } from '~/types'
 import { useRouter } from 'vue-router'
 import { useApi } from './useApi'
+import { useAxios } from "@/api/useAxios"
 
 export const useAuth = () => {
   const api = useApi()
   const login = useAuthStore()
   const router = useRouter()
+  const axios = useAxios()
 
   const auth = async (data: RuleFormLogin) => {
-    const response = await api.POST<UserAuthorizationData>("login", data)
-    if (response && response.success) {
-      login.setToken(response.data.authorization.token, response.data.authorization.exprire_in ?? 0)
-      login.setUser(response.data.user)
+    const response = await axios.post<AuthorizationData>("api/v1/token", {
+      username: data.email,
+      password: data.password,
+    })
+    if (response.data) {
+      console.log(response.data)
+      login.setToken(response.data.jwt_token, response.data?.expires_in ?? 0)
     } else {
       return response
     }

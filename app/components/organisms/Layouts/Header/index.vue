@@ -4,17 +4,16 @@
     <!-- <MoleculesMenu /> -->
     <AtomsMenu />
     <div class="header__redirect">
-      <AtomsButtonIcon :name="`oui:search`" @click="uiStore.toggleUiState('isSearch')" />
-      <AtomsButtonDefault :title="`Đăng ký`" @click="uiStore.toggleUiState('isRegisterDialog')" />
-      <AtomsButtonDefault :title="`Đăng nhập`" @click="uiStore.toggleUiState('isLoginDialog')" />
+      <!-- <AtomsButtonIcon :name="`oui:search`" @click="uiStore.toggleUiState('isSearch')" /> -->
+      <AtomsButtonDefault :title="`Đăng nhập`" @click="router.push('/login')" />
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 import Logo from '~/assets/images/logo.png'
-import { useUiStore } from '@/stores'
+import { useRouter } from 'vue-router'
 
-const uiStore = useUiStore()
+const router = useRouter()
 </script>
 <style lang="scss" scoped>
 @use 'index.scss';

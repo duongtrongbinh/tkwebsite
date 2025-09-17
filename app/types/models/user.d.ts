@@ -14,3 +14,9 @@ export interface UserAuthorizationData {
   user: User;
   authorization: Authorization;
 }
+
+export interface AuthorizationData {
+  token_type: string;
+  jwt_token: string;
+  expires_in?: number;
+}
